@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "joyas_fe": {
+    "joyas_shop_fe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/joyas_fe",
+            "outputPath": "dist/joyas_shop_fe",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "joyas_fe:build:production"
+              "browserTarget": "joyas_shop_fe:build:production"
             },
             "development": {
-              "browserTarget": "joyas_fe:build:development"
+              "browserTarget": "joyas_shop_fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "joyas_fe:build"
+            "browserTarget": "joyas_shop_fe:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "joyas_fe"
+  "defaultProject": "joyas_shop_fe"
 }
