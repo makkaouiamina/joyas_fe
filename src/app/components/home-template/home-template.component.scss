@@ -1,0 +1,45 @@
+.example-container {
+  @apply flex flex-col absolute inset-0;
+  }
+  
+  .example-toolbar {
+    @apply fixed z-20;
+    border-bottom: 1px groove #D4E157;
+  }
+  
+  h1.example-app-name {
+    @apply ml-8;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    @apply flex-1;
+  }
+
+.title{
+  @apply  text-center flex-1 text-2xl font-bold font-dancing-script;
+}
+.spacer{
+  @apply float-right;
+}
+
+.icon{
+  @apply border-0 ;
+}
+
+.language_text{
+  @apply font-bold font-dancing-script;
+}
+
+.sidenav-items{
+  @apply mt-10 p-10;
+}
+
+a{
+  @apply decoration-0 hover:text-light-green active:text-light-green;
+}
+
+.sidenav{
+  @apply h-screen w-fit;
+}

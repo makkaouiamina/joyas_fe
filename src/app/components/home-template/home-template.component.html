@@ -1,0 +1,39 @@
+<div class="example-container">
+   <mat-toolbar class="example-toolbar">
+      <button mat-icon-button (click)="openSideBar(snav)"><mat-icon>menu</mat-icon></button>
+      <a class="language_text">{{'main.shop' | translate}}</a>
+      <a href="#" class="title">{{'main.title' | translate}}</a>
+      <div class="spacer"></div>
+        <a href="#" class="language_text">Sign In</a>
+        <a mat-button class="icon">
+          <mat-icon>shopping_basket</mat-icon>
+        </a>
+        <a mat-button [matMenuTriggerFor]="LanguageMenu" class="icon" aria-label="Example icon-button with a menu">
+          <mat-icon>language</mat-icon>
+        </a>
+        <mat-menu #LanguageMenu="matMenu">
+          <div *ngFor="let lang of languages">
+            <a mat-menu-item (click)="changeLanguage(lang.code)">
+              <span class="language_text">{{ lang.label | translate}}</span>
+              <!-- <mat-icon>brightness_3</mat-icon> -->
+            </a>
+          </div>
+        </mat-menu>
+        <!--<span class="language_text">{{this.languageCode}}</span>-->
+    </mat-toolbar>
+ 
+   <mat-sidenav-container class="example-sidenav-container">
+     <mat-sidenav class="sidenav" #snav fixedTopGap="56">
+       <mat-nav-list>
+        <div class="sidenav-items">
+          <a class="font-handle" [routerLink]="['/best-sellers']" mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav.text}}</a>
+        </div>
+       </mat-nav-list>
+     </mat-sidenav>
+     <mat-sidenav-content>
+      <div class="p-20">
+        <router-outlet></router-outlet>
+      </div>
+     </mat-sidenav-content>
+   </mat-sidenav-container>
+ </div>

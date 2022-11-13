@@ -1,0 +1,12 @@
+{
+    "main": {
+        "title": "ألماس",
+        "shop": "Shop"
+    },
+    "language":{
+        "english": "الانجليزية",
+        "french": "الفرنسية",
+        "spanish": "الاسبانية",
+        "arabic": "العربية"
+    }
+}
