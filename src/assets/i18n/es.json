@@ -1,0 +1,13 @@
+{
+    "main": {
+        "title": "Diamante",
+        "shop": "Shop"
+    },
+    "language":{
+        "english": "Inglés",
+        "french": "Francés",
+        "spanish": "Español",
+        "arabic": "árabe"
+    }
+}
+   
