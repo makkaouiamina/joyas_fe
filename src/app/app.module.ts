@@ -8,19 +8,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {MatLegacyMenuModule as MatMenuModule} from '@angular/material/legacy-menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
-import { HomeTemplateComponent } from './components/home-template/home-template.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatLegacyCheckboxModule as MatCheckboxModule} from '@angular/material/legacy-checkbox';
-import {MatLegacyListModule as MatListModule} from '@angular/material/legacy-list';
-import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
-import { ShopContainerComponent } from './components/shop-container/shop-container.component';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HomeTemplateComponent } from '@components/home-template/home-template.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatListModule } from '@angular/material/list';
+import { BestSellersComponent } from '@components/best-sellers/best-sellers.component';
+import { ShopContainerComponent } from '@components/shop-container/shop-container.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 
 
