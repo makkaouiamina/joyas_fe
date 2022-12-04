@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { LanguageServiceService } from 'src/app/shared/services/language/language.service';
+import { LanguageServiceService } from '@services/language/language.service';
 
 @Component({
   selector: 'app-home-template',
