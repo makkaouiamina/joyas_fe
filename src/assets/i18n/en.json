@@ -1,7 +1,7 @@
 {
     "main": {
         "title": "Diamond",
-        "shop": "Shop"
+        "stock": "Stock"
     },
     "language":{
         "english": "English",

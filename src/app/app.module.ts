@@ -13,12 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { HomeTemplateComponent } from '@components/home-template/home-template.component';
+import { HomeTemplateComponent } from '@layouts/home-template/home-template.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
-import { BestSellersComponent } from '@components/best-sellers/best-sellers.component';
-import { ShopContainerComponent } from '@components/shop-container/shop-container.component';
+import { BestSellersComponent } from '@layouts/best-sellers/best-sellers.component';
+import { ShopContainerComponent } from '@layouts/shop-container/shop-container.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 

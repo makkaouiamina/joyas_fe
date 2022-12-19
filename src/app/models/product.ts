@@ -14,4 +14,5 @@ export class Product {
     modifiedAt : Date | null = null;
     deletedAt : Date | null = null;
     provider : Provider = new Provider();
+    ref : string = '';
 }
