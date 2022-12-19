@@ -23,7 +23,7 @@
       "dom"
     ],
     "paths":{
-      "@components/*": ["src/app/components/*"],
+      "@layouts/*": ["src/app/layouts/*"],
       "@modules/*": ["src/app/modules/*"],
       "@services/*": ["src/app/services/*"],
       "@models/*": ["src/app/models/*"],

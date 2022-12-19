@@ -1,7 +1,7 @@
 <div class="example-container">
    <mat-toolbar class="example-toolbar">
       <button mat-icon-button (click)="openSideBar(snav)"><mat-icon>menu</mat-icon></button>
-      <a class="language_text">{{'main.shop' | translate}}</a>
+      <a class="language_text">{{'main.stock' | translate}}</a>
       <a href="#" class="title">{{'main.title' | translate}}</a>
       <div class="spacer"></div>
         <!-- <a href="#" class="language_text">Sign In</a>
@@ -26,7 +26,7 @@
      <mat-sidenav class="sidenav" #snav fixedTopGap="56">
        <mat-nav-list>
         <div class="sidenav-items">
-          <a class="font-handle" [routerLink]="['/best-sellers']" mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav.text}}</a>
+          <a class="font-handle" routerLink="{{nav.link}}" mat-list-item *ngFor="let nav of rountings">{{nav.name}}</a>
         </div>
        </mat-nav-list>
      </mat-sidenav>

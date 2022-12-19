@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  constructor(){}
 
+  ngOnInit(): void {
+    console.log("product module");
+  }
 }
