@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '@environments/environment';
 import { Image } from '@models/image';
 import { Observable } from 'rxjs';
 
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ImageService {
 
-  private url = `${environment.apiUrl}/images`;
+  private url = '/api/images';
 
   constructor(private http: HttpClient) { }
 
