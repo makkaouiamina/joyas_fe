@@ -76,7 +76,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "your-application-name:build",
+            "browserTarget": "joyas_shop_fe:build",
             "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
