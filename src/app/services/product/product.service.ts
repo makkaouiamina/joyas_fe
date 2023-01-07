@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '@environments/environment';
 import { Product } from '@models/product';
 import { Observable } from 'rxjs';
 
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  private url = `${environment.apiUrl}/products`;
+  private url = '/api/products';
 
   constructor(private http: HttpClient) { }
 

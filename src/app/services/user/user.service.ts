@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '@environments/environment';
 import { User } from '@models/user';
 import { Observable } from 'rxjs';
 
@@ -9,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private url = `${environment.apiUrl}/users`;
+  private url = '/api/users';
 
   constructor(private http : HttpClient) { }
 
