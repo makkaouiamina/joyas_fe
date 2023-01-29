@@ -4,12 +4,12 @@ export class ProductByLang{
     id : number = 0;
     name : string= '';
     description : string= '';
-    langCons : LangCons = LangCons.ENG;
+    langCons : LangCons = LangCons.EN;
     product : Product = new Product();
 }
 
 enum LangCons {
-    ENG = "Eng",
-    ES = "Esp",
+    EN = "En",
+    ES = "Es",
     FR = "Fr",
 }

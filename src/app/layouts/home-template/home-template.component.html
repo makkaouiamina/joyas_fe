@@ -1,6 +1,6 @@
 <div class="example-container">
    <mat-toolbar class="example-toolbar">
-      <button mat-icon-button (click)="openSideBar(snav)"><mat-icon>menu</mat-icon></button>
+      <button class="ml-4" mat-icon-button (click)="openSideBar(snav)"><mat-icon>menu</mat-icon></button>
       <a class="language_text">{{'main.stock' | translate}}</a>
       <a href="#" class="title">{{'main.title' | translate}}</a>
       <div class="spacer"></div>
@@ -8,18 +8,18 @@
         <a mat-button class="icon">
           <mat-icon>shopping_basket</mat-icon>
         </a> -->
-        <a mat-button [matMenuTriggerFor]="LanguageMenu" class="icon" aria-label="Example icon-button with a menu">
+        <a mat-button [matMenuTriggerFor]="LanguageMenu" class="icon mr-8" aria-label="Example icon-button with a menu">
           <mat-icon>language</mat-icon>
+          <span class="language_text">{{this.language}}</span>
         </a>
         <mat-menu #LanguageMenu="matMenu">
           <div *ngFor="let lang of languages">
-            <a mat-menu-item (click)="changeLanguage(lang.code)">
+            <a mat-menu-item (click)="setSelectedLanguage(lang.code)">
               <span class="language_text">{{ lang.label | translate}}</span>
               <!-- <mat-icon>brightness_3</mat-icon> -->
             </a>
           </div>
         </mat-menu>
-        <!--<span class="language_text">{{this.languageCode}}</span>-->
     </mat-toolbar>
  
    <mat-sidenav-container class="example-sidenav-container">
