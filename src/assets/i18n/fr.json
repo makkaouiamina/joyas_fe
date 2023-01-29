@@ -1,13 +1,16 @@
 {
     "main": {
         "title": "Diamant",
-        "shop": "Stock"
+        "shop": "Stock",
+        "name": "Nom",
+        "actions" : "Actions"
     },
     "language":{
         "english": "Anglais",
         "french": "Français",
         "spanish": "Espagnol",
-        "arabic": "Arabe"
+        "arabic": "Arabe",
+        "display": "langue d'affichage"
     }
 }
    

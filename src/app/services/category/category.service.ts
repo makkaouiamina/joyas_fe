@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
 import { Category } from '@models/category';
+import { CategoryByLang } from '@models/categoryByLang';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,12 +14,12 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getAllcategories(): Observable<Category[]>{
-    return this.http.get<Category[]>(`${this.url}`);
+  getAllcategories(): Observable<CategoryByLang[]>{
+    return this.http.get<CategoryByLang[]>(`${this.url}`);
   }
 
-  getCategoryById(category_id: number): Observable<Category>{
-    return this.http.get<Category>(`${this.url}/${category_id}`);
+  getCategoryById(category_id: number): Observable<CategoryByLang[]>{
+    return this.http.get<CategoryByLang[]>(`${this.url}/${category_id}`);
   }
 
   addCategory(category: Category): Observable<Category>{

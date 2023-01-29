@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { LanguageServiceService } from '@services/language/language.service';
 
@@ -9,17 +8,12 @@ import { LanguageServiceService } from '@services/language/language.service';
   styleUrls: ['./home-template.component.scss']
 })
 export class HomeTemplateComponent implements OnInit {
-
   theme : string = '';
-  languageCode : string = 'Eng';
   expression : boolean = false;
   isOpened:boolean = false;
   router: string = '';
-  languages:{code:string, label:string, text:string}[] = [
-    {code: 'en', label: 'language.english', text: 'Eng'},
-    {code: 'fr', label: 'language.french', text: 'Fr'},
-    {code: 'es', label: 'language.spanish', text: 'Esp'},
-  ];
+  languages : {code:string, label:string, text:string}[] = [];
+  language : string = '';
 
   rountings:{name: string, link: string}[] = [
     {name: 'Products', link : '/products'},
@@ -29,12 +23,13 @@ export class HomeTemplateComponent implements OnInit {
   constructor(private languageService : LanguageServiceService) { }
 
   ngOnInit(): void {
+    this.languages = this.languageService.languages;
+    this.language = this.languageService.defaultLangCode.toUpperCase();
   }
 
-  changeLanguage(code: string){
-    var languageChoosen = this.languages.find(lang => lang.code == code);
-    this.languageService.changeLanguage(code);
-    languageChoosen != null ? this.languageCode = languageChoosen.text : this.languageCode;
+  setSelectedLanguage(code: string){
+    this.languageService.setSelectedLanguage(code);
+    this.language = code.toUpperCase();
   }
 
   openSideBar(snav: MatSidenav){
