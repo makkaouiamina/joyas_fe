@@ -28,6 +28,7 @@
       "@services/*": ["src/app/services/*"],
       "@models/*": ["src/app/models/*"],
       "@environments/*": ["src/environments/*"],
+      "@appModule/*": ["src/app/*"],
     },
     "useDefineForClassFields": false
   },

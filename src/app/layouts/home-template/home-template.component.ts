@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { LanguageServiceService } from '@services/language/language.service';
 
@@ -8,6 +8,8 @@ import { LanguageServiceService } from '@services/language/language.service';
   styleUrls: ['./home-template.component.scss']
 })
 export class HomeTemplateComponent implements OnInit {
+  @Input() bgDark:boolean = false;
+  dark:boolean = false;
   theme : string = '';
   expression : boolean = false;
   isOpened:boolean = false;
@@ -23,8 +25,18 @@ export class HomeTemplateComponent implements OnInit {
   constructor(private languageService : LanguageServiceService) { }
 
   ngOnInit(): void {
+    document.querySelector("html")?.classList.remove('dark');
+    localStorage.setItem('darkMode', 'false') ;
     this.languages = this.languageService.languages;
     this.language = this.languageService.defaultLangCode.toUpperCase();
+
+    //theme
+    if(localStorage.getItem('darkMode')){
+      this.dark = localStorage.getItem('darkMode') == 'true' || false;
+    }
+    if(this.dark){
+      document.querySelector("html")?.classList.add('dark');
+    }
   }
 
   setSelectedLanguage(code: string){
@@ -34,5 +46,20 @@ export class HomeTemplateComponent implements OnInit {
 
   openSideBar(snav: MatSidenav){
     snav.toggle();
+  }
+
+  switchDarkMode(): void{
+    this.dark = localStorage.getItem('darkMode') == 'true' || false;
+    this.dark = !this.dark;
+
+    if(this.dark){
+      document.querySelector("html")?.classList.add('dark');
+      localStorage.setItem('darkMode', 'true') ;
+    }
+    else{
+      document.querySelector("html")?.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false') ;
+    }
+
   }
 }

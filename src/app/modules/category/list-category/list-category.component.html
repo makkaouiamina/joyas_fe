@@ -1,0 +1,48 @@
+<div class="dark:bg-slate-600">
+  <div class="flex flex-row flex-wrap">
+    <div class="w-full pb-4">
+      <a mat-button (click)="openDialog()" class="icon float-right">
+        <mat-icon>add</mat-icon>
+      </a>
+    </div>
+    <div class="w-full">
+      <div class="example-container mat-elevation-z8">
+        <mat-table class="dark:bg-slate-600" #table [dataSource]="dataSource">
+      
+          <!-- Id Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef class="dark:text-white text-label font-bold">{{'category.table.id' | translate }}</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="dark:text-white text-label">{{element.id}}</mat-cell>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef class="dark:text-white text-label font-bold">{{'category.table.name' | translate }}</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="dark:text-white text-label">{{element.name}}</mat-cell>
+          </ng-container>
+      
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef class="dark:text-white text-label font-bold">{{'category.table.actions' | translate }}</mat-header-cell>
+                <mat-cell *matCellDef="let element" class="dark:text-white text-label"></mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      
+        <mat-paginator class="dark:bg-slate-600 dark:text-white text-label" #paginator
+                       [pageSize]="4"
+                       [pageSizeOptions]="[4, 8, 16, 24]"
+                       [showFirstLastButtons]="true">
+        </mat-paginator>
+    </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
+  
+  

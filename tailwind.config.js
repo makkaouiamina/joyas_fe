@@ -3,15 +3,16 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
+  darkMode : 'class',
   theme: {
-    extend: {},
-    colors:{
-      'light-green': '#D4E157'
+    extend: {
+      colors:{
+        'primary': '#D4E157'
+      },
     },
     fontFamily:{
       'dancing-script': 'Dancing Script, cursive',
-      'genral-script': 'Old Standard TT, serif',
-      'handle':'Handlee, cursive',
+      'kalam': 'Kalam, cursive'
     },
   },
   plugins: [],
