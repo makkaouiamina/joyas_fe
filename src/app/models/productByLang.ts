@@ -1,3 +1,4 @@
+import { LangCons } from './lang-cons.enum';
 import { Product } from "./product";
 
 export class ProductByLang{
@@ -6,10 +7,4 @@ export class ProductByLang{
     description : string= '';
     langCons : LangCons = LangCons.EN;
     product : Product = new Product();
-}
-
-enum LangCons {
-    EN = "En",
-    ES = "Es",
-    FR = "Fr",
 }
