@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BestSellersComponent } from '@layouts/best-sellers/best-sellers.component';
 import { HomeTemplateComponent } from '@layouts/home-template/home-template.component';
 
 const routes: Routes = [
   { path: '', component: HomeTemplateComponent },
-  { path: 'best-sellers', component: HomeTemplateComponent, children:[{path: '', component: BestSellersComponent}]},
   { path : 'products', component: HomeTemplateComponent, loadChildren:() => import('@modules/product/product.module').then(res=> res.ProductModule)},
   { path : 'categories', component: HomeTemplateComponent, loadChildren:() => import('@modules/category/category.module').then(res => res.CategoryModule)},
   { path : 'providers', component: HomeTemplateComponent, loadChildren:() => import('@modules/provider/provider.module').then(res => res.ProviderModule)},

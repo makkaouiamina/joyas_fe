@@ -12,14 +12,9 @@
   }
   
   .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     @apply flex-1;
   }
 
-.title{
-  @apply  text-center flex-1 text-2xl font-bold font-dancing-script;
-}
 .spacer{
   @apply float-right;
 }
@@ -29,7 +24,7 @@
 }
 
 .language_text{
-  @apply font-bold font-dancing-script;
+  @apply font-bold font-dancing-script ml-2;
 }
 
 .sidenav-items{
@@ -37,7 +32,7 @@
 }
 
 a{
-  @apply decoration-0 hover:text-light-green active:text-light-green;
+  @apply decoration-0 hover:text-primary active:text-primary;
 }
 
 .sidenav{

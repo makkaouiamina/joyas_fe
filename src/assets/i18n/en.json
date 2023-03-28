@@ -2,15 +2,20 @@
     "main": {
         "title": "Diamond",
         "stock": "Stock",
-        "name": "Name",
-        "actions" : "Actions"
+        "name": "Name"
     },
     "language":{
         "english": "English",
         "french": "French",
         "spanish": "Spanish",
-        "arabic": "Arabic",
         "display" : "Display language"
+    },
+    "category":{
+        "table":{
+            "id": "Id.",
+            "name": "Name",
+            "actions": "Actions"
+        }
     }
 }
    

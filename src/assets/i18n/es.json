@@ -11,6 +11,13 @@
         "spanish": "Español",
         "arabic": "árabe",
         "display" : "idioma de la pantalla"
+    },
+    "category":{
+        "table":{
+            "id": "Id.",
+            "name": "Nombre",
+            "actions": "Acciones"
+        }
     }
 }
    
