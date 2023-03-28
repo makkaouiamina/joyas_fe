@@ -1,3 +1,4 @@
+import { LangCons } from './lang-cons.enum';
 import { Category } from "./category";
 
 export class CategoryByLang{
@@ -5,10 +6,4 @@ export class CategoryByLang{
     name : string = '';
     langCode : LangCons = LangCons.EN;
     category : Category = new Category();
-}
-
-enum LangCons {
-    EN = "En",
-    ES = "Es",
-    FR = "Fr",
 }
